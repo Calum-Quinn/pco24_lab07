@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o"
+  "CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o.d"
   "CMakeFiles/modelchecking_lib.dir/analyzerwatchdog.cpp.o"
   "CMakeFiles/modelchecking_lib.dir/analyzerwatchdog.cpp.o.d"
+  "CMakeFiles/modelchecking_lib.dir/main.cpp.o"
+  "CMakeFiles/modelchecking_lib.dir/main.cpp.o.d"
   "CMakeFiles/modelchecking_lib.dir/observablethread.cpp.o"
   "CMakeFiles/modelchecking_lib.dir/observablethread.cpp.o.d"
   "CMakeFiles/modelchecking_lib.dir/pcoconcurrencyanalyzer.cpp.o"

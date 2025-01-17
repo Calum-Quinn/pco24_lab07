@@ -167,6 +167,34 @@ src/CMakeFiles/modelchecking_lib.dir/scenario.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modelchecking_lib.dir/scenario.cpp.s"
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/shared/pco24_lab07/code/src/scenario.cpp -o CMakeFiles/modelchecking_lib.dir/scenario.cpp.s
 
+src/CMakeFiles/modelchecking_lib.dir/main.cpp.o: src/CMakeFiles/modelchecking_lib.dir/flags.make
+src/CMakeFiles/modelchecking_lib.dir/main.cpp.o: /media/shared/pco24_lab07/code/src/main.cpp
+src/CMakeFiles/modelchecking_lib.dir/main.cpp.o: src/CMakeFiles/modelchecking_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/modelchecking_lib.dir/main.cpp.o"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/modelchecking_lib.dir/main.cpp.o -MF CMakeFiles/modelchecking_lib.dir/main.cpp.o.d -o CMakeFiles/modelchecking_lib.dir/main.cpp.o -c /media/shared/pco24_lab07/code/src/main.cpp
+
+src/CMakeFiles/modelchecking_lib.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modelchecking_lib.dir/main.cpp.i"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/shared/pco24_lab07/code/src/main.cpp > CMakeFiles/modelchecking_lib.dir/main.cpp.i
+
+src/CMakeFiles/modelchecking_lib.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modelchecking_lib.dir/main.cpp.s"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/shared/pco24_lab07/code/src/main.cpp -o CMakeFiles/modelchecking_lib.dir/main.cpp.s
+
+src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o: src/CMakeFiles/modelchecking_lib.dir/flags.make
+src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o: /media/shared/pco24_lab07/code/src/ReaderWriterChecker.cpp
+src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o: src/CMakeFiles/modelchecking_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o -MF CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o.d -o CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o -c /media/shared/pco24_lab07/code/src/ReaderWriterChecker.cpp
+
+src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.i"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/shared/pco24_lab07/code/src/ReaderWriterChecker.cpp > CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.i
+
+src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.s"
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/shared/pco24_lab07/code/src/ReaderWriterChecker.cpp -o CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.s
+
 # Object files for target modelchecking_lib
 modelchecking_lib_OBJECTS = \
 "CMakeFiles/modelchecking_lib.dir/analyzerwatchdog.cpp.o" \
@@ -175,7 +203,9 @@ modelchecking_lib_OBJECTS = \
 "CMakeFiles/modelchecking_lib.dir/pcomodelchecker.cpp.o" \
 "CMakeFiles/modelchecking_lib.dir/pcomodel.cpp.o" \
 "CMakeFiles/modelchecking_lib.dir/scenariobuilder.cpp.o" \
-"CMakeFiles/modelchecking_lib.dir/scenario.cpp.o"
+"CMakeFiles/modelchecking_lib.dir/scenario.cpp.o" \
+"CMakeFiles/modelchecking_lib.dir/main.cpp.o" \
+"CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o"
 
 # External object files for target modelchecking_lib
 modelchecking_lib_EXTERNAL_OBJECTS =
@@ -187,9 +217,11 @@ src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/pcomodelchecker
 src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/pcomodel.cpp.o
 src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/scenariobuilder.cpp.o
 src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/scenario.cpp.o
+src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/main.cpp.o
+src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o
 src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/build.make
 src/libmodelchecking_lib.a: src/CMakeFiles/modelchecking_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libmodelchecking_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libmodelchecking_lib.a"
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && $(CMAKE_COMMAND) -P CMakeFiles/modelchecking_lib.dir/cmake_clean_target.cmake
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/modelchecking_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -2,8 +2,7 @@
 #include "pcomodelchecker.h"
 
 int main(int /*argc*/, char */*argv*/[])
-{ checker.run();
-    }
+{
     {
         OurModel model;
         PcoModelChecker checker;

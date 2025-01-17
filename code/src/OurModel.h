@@ -2,13 +2,30 @@
 #define OurModel_H
 
 #include <iostream>
+#include <random>
 
 #include "pcomodel.h"
 #include "scenariobuilder.h"
+#include "abstractreaderwriter.h"
 
-int getNumber()
-{
-    return number;
+static int nbIterations = 10;
+
+int getNbIterations()  {
+    return nbIterations;
+}
+
+std::unique_ptr<AbstractReaderWriter> protocol = std::make_unique<AbstractReaderWriter>();
+static AbstractReaderWriter abstractReaderWriter = protocol.get();
+
+AbstractReaderWriter getAbstractReaderWriter() {
+    return abstractReaderWriter;
+}
+
+auto checker = std::make_unique<ReaderWriterChecker>();
+static ReaderWriterChecker readerWriterChecker = checker.get();
+
+ReaderWriterChecker getReaderWriterChecker() {
+    return readerWriterChecker;
 }
 
 // TaskWriter
@@ -42,7 +59,7 @@ private:
         std::uniform_int_distribution<> dis(1, 1000);
 
         startSection(2);
-        for(int iter = 0; iter < nbIterations; iter ++) {
+        for(int iter = 0; iter < getNbIterations(); iter ++) {
             startSection(3);
             resource->lockWriting();
             checker->writerIn();
@@ -89,7 +106,7 @@ private:
         std::uniform_int_distribution<> dis(1, 1000);
 
         startSection(2);
-        for(int iter = 0; iter < nbIterations; iter ++) {
+        for(int iter = 0; iter < getNbIterations(); iter ++) {
             startSection(3);
             resource->lockReading();
             checker->readerIn();
