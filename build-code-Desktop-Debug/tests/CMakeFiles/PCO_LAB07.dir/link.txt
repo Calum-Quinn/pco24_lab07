@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/PCO_LAB07.dir/main.cpp.o -o PCO_LAB07  -lpcosynchro ../src/libmodelchecking_lib.a 

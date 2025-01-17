@@ -1,0 +1,8 @@
+/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles/edit_cache.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/src/CMakeFiles/modelchecking_lib.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/src/CMakeFiles/edit_cache.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/src/CMakeFiles/rebuild_cache.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/CMakeFiles/PCO_LAB07.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/CMakeFiles/edit_cache.dir
+/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/CMakeFiles/rebuild_cache.dir

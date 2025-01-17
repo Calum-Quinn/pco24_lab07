@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PCO_lab07"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modelchecking_lib">
+				<Option output="/media/shared/pco24_lab07/build-code-Desktop-Debug/src/libmodelchecking_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/media/shared/pco24_lab07/code/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 modelchecking_lib"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="modelchecking_lib/fast">
+				<Option output="/media/shared/pco24_lab07/build-code-Desktop-Debug/src/libmodelchecking_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/media/shared/pco24_lab07/code/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 modelchecking_lib/fast"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PCO_LAB07">
+				<Option output="/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/PCO_LAB07" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/media/shared/pco24_lab07/code/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 PCO_LAB07"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PCO_LAB07/fast">
+				<Option output="/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/PCO_LAB07" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/shared/pco24_lab07/build-code-Desktop-Debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/media/shared/pco24_lab07/code/src"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 PCO_LAB07/fast"/>
+					<CompileFile command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j10 -f &quot;/media/shared/pco24_lab07/build-code-Desktop-Debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/media/shared/pco24_lab07/code/src/analyzerwatchdog.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/analyzerwatchdog.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/observablethread.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/observablethread.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcoconcurrencyanalyzer.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcoconcurrencyanalyzer.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcomodel.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcomodel.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcomodelchecker.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/pcomodelchecker.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/scenario.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/scenario.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/scenariobuilder.cpp">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/scenariobuilder.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/main.cpp">
+			<Option target="PCO_LAB07"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/modelnumbers.h">
+			<Option target="PCO_LAB07"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/modeltemplate.h">
+			<Option target="PCO_LAB07"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
