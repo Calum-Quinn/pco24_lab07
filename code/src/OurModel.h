@@ -1,187 +1,170 @@
-#ifndef OurModel_H
-#define OurModel_H
+#ifndef OUR_MODEL_H
+#define OUR_MODEL_H
 
 #include <iostream>
 #include <random>
+#include <memory>
+#include <set>
+#include <pcosynchro/pcologger.h>
 
 #include "pcomodel.h"
 #include "scenariobuilder.h"
 #include "abstractreaderwriter.h"
+#include "ConcreteReaderWriter.h"
+#include "ReaderWriterChecker.h"
 
+std::unique_ptr<ConcreteReaderWriter> resource = std::make_unique<ConcreteReaderWriter>();
+std::shared_ptr<ReaderWriterChecker> checker = std::make_unique<ReaderWriterChecker>();
+
+// Nombre d'itérations configurable
 static int nbIterations = 10;
 
-int getNbIterations()  {
+// Accesseurs pour nbIterations
+int getNbIterations() {
     return nbIterations;
 }
 
-std::unique_ptr<AbstractReaderWriter> protocol = std::make_unique<AbstractReaderWriter>();
-static AbstractReaderWriter abstractReaderWriter = protocol.get();
-
-AbstractReaderWriter getAbstractReaderWriter() {
-    return abstractReaderWriter;
-}
-
-auto checker = std::make_unique<ReaderWriterChecker>();
-static ReaderWriterChecker readerWriterChecker = checker.get();
-
-ReaderWriterChecker getReaderWriterChecker() {
-    return readerWriterChecker;
-}
-
-// TaskWriter
-class ThreadA : public ObservableThread
-{
+// Classes ThreadA et ThreadB (écrivain et lecteur)
+class ThreadA : public ObservableThread {
 public:
-    explicit ThreadA(std::string id = "") :
-        ObservableThread(std::move(id))
+    explicit ThreadA(std::shared_ptr<ConcreteReaderWriter> resource,
+                     std::shared_ptr<ReaderWriterChecker> checker,
+                     const std::string &id = "") : 
+        ObservableThread(id),
+        resource(std::move(resource)),
+        checker(std::move(checker))
     {
-        scenarioGraph = std::make_unique<ScenarioGraph>();
+        // Création du graphe de scénario
         auto scenario = scenarioGraph->createNode(this, -1);
         auto p1 = scenarioGraph->createNode(this, 1);
         auto p2 = scenarioGraph->createNode(this, 2);
         auto p3 = scenarioGraph->createNode(this, 3);
         auto p4 = scenarioGraph->createNode(this, 4);
+
         scenario->next.push_back(p1);
         p1->next.push_back(p2);
         p2->next.push_back(p3);
         p2->next.push_back(p4);
-        p3->next.push_back(p3);
         p3->next.push_back(p4);
         scenarioGraph->setInitialNode(scenario);
     }
 
 private:
-    void run() override
-    {
-        startSection(1);
-        std::random_device rd;  //Will be used to obtain a seed for the random number engine
-        std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
+    void run() override {
+        std::random_device rd;
+        std::mt19937 gen(rd());
         std::uniform_int_distribution<> dis(1, 1000);
 
-        startSection(2);
-        for(int iter = 0; iter < getNbIterations(); iter ++) {
-            startSection(3);
+        for (int iter = 0; iter < getNbIterations(); ++iter) {
+            startSection(1);
             resource->lockWriting();
             checker->writerIn();
-            logger() << "Task W" << tid << ": accessing " << iter << '\n';
-            PcoThread::usleep(static_cast<uint64_t>(dis(gen)));
+            logger() << "ThreadA: Writing iteration " << iter << std::endl;
+            PcoThread::usleep(dis(gen));
             checker->writerOut();
             resource->unlockWriting();
-            logger() << "Task W" << tid << ": leaving" << '\n';
-            PcoThread::usleep(static_cast<uint64_t>(dis(gen)));
+            PcoThread::usleep(dis(gen));
+            endSection();
         }
-        startSection(4);
         endScenario();
     }
+
+    std::shared_ptr<ConcreteReaderWriter> resource;
+    std::shared_ptr<ReaderWriterChecker> checker;
 };
 
-// TaskReader
-class ThreadB : public ObservableThread
-{
+class ThreadB : public ObservableThread {
 public:
-    explicit ThreadB(std::string id = "") :
-        ObservableThread(std::move(id))
+    explicit ThreadB(std::shared_ptr<ConcreteReaderWriter> resource,
+                     std::shared_ptr<ReaderWriterChecker> checker,
+                     const std::string &id = "") : 
+        ObservableThread(id),
+        resource(std::move(resource)),
+        checker(std::move(checker))
     {
-        scenarioGraph = std::make_unique<ScenarioGraph>();
+        // Création du graphe de scénario
         auto scenario = scenarioGraph->createNode(this, -1);
         auto p1 = scenarioGraph->createNode(this, 1);
         auto p2 = scenarioGraph->createNode(this, 2);
         auto p3 = scenarioGraph->createNode(this, 3);
         auto p4 = scenarioGraph->createNode(this, 4);
+
         scenario->next.push_back(p1);
         p1->next.push_back(p2);
         p2->next.push_back(p3);
         p2->next.push_back(p4);
-        p3->next.push_back(p3);
         p3->next.push_back(p4);
         scenarioGraph->setInitialNode(scenario);
     }
 
 private:
-    void run() override
-    {
-        startSection(1);
-        std::random_device rd;  //Will be used to obtain a seed for the random number engine
-        std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
+    void run() override {
+        std::random_device rd;
+        std::mt19937 gen(rd());
         std::uniform_int_distribution<> dis(1, 1000);
 
-        startSection(2);
-        for(int iter = 0; iter < getNbIterations(); iter ++) {
-            startSection(3);
+        for (int iter = 0; iter < getNbIterations(); ++iter) {
+            startSection(1);
             resource->lockReading();
             checker->readerIn();
-            logger() << "Task R" << tid << ": accessing " << iter << '\n';
-            PcoThread::usleep(static_cast<uint64_t>(dis(gen)));
+            logger() << "ThreadB: Reading iteration " << iter << std::endl;
+            PcoThread::usleep(dis(gen));
             checker->readerOut();
             resource->unlockReading();
-            logger() << "Task R" << tid << ": leaving" << '\n';
-            PcoThread::usleep(static_cast<uint64_t>(dis(gen)));
+            PcoThread::usleep(dis(gen));
+            endSection();
         }
-        startSection(4);
         endScenario();
     }
+
+    std::shared_ptr<ConcreteReaderWriter> resource;
+    std::shared_ptr<ReaderWriterChecker> checker;
 };
 
-class OurModel: public PcoModel
-{
+// Classe OurModel
+class OurModel : public PcoModel {
 public:
-
     bool checkInvariants() override {
-        // For testing purpose :
-        //std::cout << "Checking invariant" << std::endl;
-        return true;
+        return true; // Toujours vrai dans ce cas
     }
 
     void build() override {
+        auto sharedResource = std::make_shared<ConcreteReaderWriter>();
+        auto sharedChecker = std::make_shared<ReaderWriterChecker>();
 #ifdef PREDEFINED_SCENARIOS
 
-        // threads.emplace_back(std::make_unique<ThreadA>("1"));
-        // threads.emplace_back(std::make_unique<ThreadB>("2"));
+        auto t1 = std::make_unique<ThreadA>(sharedResource, sharedChecker, "A");
+        auto t2 = std::make_unique<ThreadB>(sharedResource, sharedChecker, "B");
 
-        // auto t1 = threads[0].get();
-        // auto t2 = threads[1].get();
-        // auto builder = std::make_unique<PredefinedScenarioBuilderIter>();
-        // std::vector<Scenario> scenarios = {
-        //     {{t1, 1},{t1, 2},{t1, 3},{t2, 4},{t2, 5},{t2, 6}},
-        //     {{t2, 4},{t2, 5},{t2, 6},{t1, 1},{t1, 2},{t1, 3}}
-        // };
-        // builder->setScenarios(scenarios);
-        // scenarioBuilder = std::move(builder);
+        std::vector<Scenario> scenarios = {
+            {{t1.get(), 1}, {t1.get(), 2}, {t2.get(), 1}, {t2.get(), 2}},
+            {{t2.get(), 1}, {t2.get(), 2}, {t1.get(), 1}, {t1.get(), 2}}
+        };
 
-#else // PREDEFINED_SCENARIOS
-
-        threads.emplace_back(std::make_unique<ThreadA>("1"));
-        threads.emplace_back(std::make_unique<ThreadB>("2"));
+        auto builder = std::make_unique<PredefinedScenarioBuilderIter>();
+        builder->setScenarios(scenarios);
+        scenarioBuilder = std::move(builder);
+#else
+        threads.emplace_back(std::make_unique<ThreadA>(sharedResource, sharedChecker, "A"));
+        threads.emplace_back(std::make_unique<ThreadB>(sharedResource, sharedChecker, "B"));
 
         scenarioBuilder = std::make_unique<ScenarioBuilderBuffer>();
         scenarioBuilder->init(threads, 30);
-
-#endif // PREDEFINED_SCENARIOS
-    }
-
-    void preRun(Scenario &/*scenario*/) override {
-
+#endif
     }
 
     void postRun(Scenario &scenario) override {
         std::cout << "---------------------------------------" << std::endl;
-        std::cout << "Scenario : ";
+        std::cout << "Scenario: ";
         ScenarioPrint::printScenario(scenario);
-        std::cout << "Number = " << getNumber() << std::endl;
-        possibleNumber.insert(getNumber());
     }
-
-    std::set<int> possibleNumber;
 
     void finalReport() override {
         std::cout << "---------------------------------------" << std::endl;
-        std::cout << "Possible output number : ";
-        for (const int &value : possibleNumber)
-            std::cout << value << ", ";
-        std::cout << std::endl;
-        std::cout << std::flush;
+        std::cout << "Possible Numbers: ";
     }
 
+private:
 };
 
-#endif // OurModel_H
+#endif // OUR_MODEL_H

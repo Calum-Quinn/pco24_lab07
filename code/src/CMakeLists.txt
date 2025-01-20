@@ -7,7 +7,7 @@ set(SRC_FILES
     scenariobuilder.cpp
     scenario.cpp
     main.cpp
-    ReaderWriterChecker.cpp
+    ReaderWriterLock.cpp
 )
 
 set(HEADER_FILES
@@ -20,6 +20,8 @@ set(HEADER_FILES
     scenario.h
     OurModel.h
     abstractreaderwriter.h
+    ConcreteReaderWriter.h
+    ReaderWriterChecker.h
 )
 
 add_library(modelchecking_lib ${SRC_FILES} ${HEADER_FILES})
