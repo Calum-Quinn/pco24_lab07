@@ -130,29 +130,29 @@ modelchecking_lib/fast:
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/build
 .PHONY : modelchecking_lib/fast
 
-ReaderWriterChecker.o: ReaderWriterChecker.cpp.o
-.PHONY : ReaderWriterChecker.o
+ReaderWriterLock.o: ReaderWriterLock.cpp.o
+.PHONY : ReaderWriterLock.o
 
 # target to build an object file
-ReaderWriterChecker.cpp.o:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.o
-.PHONY : ReaderWriterChecker.cpp.o
+ReaderWriterLock.cpp.o:
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.o
+.PHONY : ReaderWriterLock.cpp.o
 
-ReaderWriterChecker.i: ReaderWriterChecker.cpp.i
-.PHONY : ReaderWriterChecker.i
+ReaderWriterLock.i: ReaderWriterLock.cpp.i
+.PHONY : ReaderWriterLock.i
 
 # target to preprocess a source file
-ReaderWriterChecker.cpp.i:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.i
-.PHONY : ReaderWriterChecker.cpp.i
+ReaderWriterLock.cpp.i:
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.i
+.PHONY : ReaderWriterLock.cpp.i
 
-ReaderWriterChecker.s: ReaderWriterChecker.cpp.s
-.PHONY : ReaderWriterChecker.s
+ReaderWriterLock.s: ReaderWriterLock.cpp.s
+.PHONY : ReaderWriterLock.s
 
 # target to generate assembly for a file
-ReaderWriterChecker.cpp.s:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterChecker.cpp.s
-.PHONY : ReaderWriterChecker.cpp.s
+ReaderWriterLock.cpp.s:
+	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.s
+.PHONY : ReaderWriterLock.cpp.s
 
 analyzerwatchdog.o: analyzerwatchdog.cpp.o
 .PHONY : analyzerwatchdog.o
@@ -355,9 +355,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... modelchecking_lib"
-	@echo "... ReaderWriterChecker.o"
-	@echo "... ReaderWriterChecker.i"
-	@echo "... ReaderWriterChecker.s"
+	@echo "... ReaderWriterLock.o"
+	@echo "... ReaderWriterLock.i"
+	@echo "... ReaderWriterLock.s"
 	@echo "... analyzerwatchdog.o"
 	@echo "... analyzerwatchdog.i"
 	@echo "... analyzerwatchdog.s"

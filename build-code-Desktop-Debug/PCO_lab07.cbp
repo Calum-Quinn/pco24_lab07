@@ -130,10 +130,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/media/shared/pco24_lab07/code/src/ConcreteReaderWriter.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/src/OurModel.h">
 			<Option target="modelchecking_lib"/>
 		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/ReaderWriterChecker.cpp">
+		<Unit filename="/media/shared/pco24_lab07/code/src/ReaderWriterChecker.h">
+			<Option target="modelchecking_lib"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/src/ReaderWriterLock.cpp">
 			<Option target="modelchecking_lib"/>
 		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/src/abstractreaderwriter.h">
