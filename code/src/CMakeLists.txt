@@ -6,8 +6,6 @@ set(SRC_FILES
     pcomodel.cpp
     scenariobuilder.cpp
     scenario.cpp
-    main.cpp
-    ReaderWriterLock.cpp
 )
 
 set(HEADER_FILES
@@ -18,10 +16,6 @@ set(HEADER_FILES
     pcomodel.h
     scenariobuilder.h
     scenario.h
-    OurModel.h
-    abstractreaderwriter.h
-    ConcreteReaderWriter.h
-    ReaderWriterChecker.h
 )
 
 add_library(modelchecking_lib ${SRC_FILES} ${HEADER_FILES})

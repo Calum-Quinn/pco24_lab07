@@ -67,6 +67,9 @@
 		<Unit filename="/media/shared/pco24_lab07/code/tests/main.cpp">
 			<Option target="PCO_LAB07"/>
 		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/modelNew.h">
+			<Option target="PCO_LAB07"/>
+		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/tests/modelnumbers.h">
 			<Option target="PCO_LAB07"/>
 		</Unit>

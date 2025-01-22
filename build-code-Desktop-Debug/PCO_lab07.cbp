@@ -130,28 +130,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/media/shared/pco24_lab07/code/src/ConcreteReaderWriter.h">
-			<Option target="modelchecking_lib"/>
-		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/OurModel.h">
-			<Option target="modelchecking_lib"/>
-		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/ReaderWriterChecker.h">
-			<Option target="modelchecking_lib"/>
-		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/ReaderWriterLock.cpp">
-			<Option target="modelchecking_lib"/>
-		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/abstractreaderwriter.h">
-			<Option target="modelchecking_lib"/>
-		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/src/analyzerwatchdog.cpp">
 			<Option target="modelchecking_lib"/>
 		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/src/analyzerwatchdog.h">
-			<Option target="modelchecking_lib"/>
-		</Unit>
-		<Unit filename="/media/shared/pco24_lab07/code/src/main.cpp">
 			<Option target="modelchecking_lib"/>
 		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/src/observablethread.cpp">
@@ -191,6 +173,9 @@
 			<Option target="modelchecking_lib"/>
 		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/tests/main.cpp">
+			<Option target="PCO_LAB07"/>
+		</Unit>
+		<Unit filename="/media/shared/pco24_lab07/code/tests/modelNew.h">
 			<Option target="PCO_LAB07"/>
 		</Unit>
 		<Unit filename="/media/shared/pco24_lab07/code/tests/modelnumbers.h">

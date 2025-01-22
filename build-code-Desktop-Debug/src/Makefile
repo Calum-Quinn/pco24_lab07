@@ -130,30 +130,6 @@ modelchecking_lib/fast:
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/build
 .PHONY : modelchecking_lib/fast
 
-ReaderWriterLock.o: ReaderWriterLock.cpp.o
-.PHONY : ReaderWriterLock.o
-
-# target to build an object file
-ReaderWriterLock.cpp.o:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.o
-.PHONY : ReaderWriterLock.cpp.o
-
-ReaderWriterLock.i: ReaderWriterLock.cpp.i
-.PHONY : ReaderWriterLock.i
-
-# target to preprocess a source file
-ReaderWriterLock.cpp.i:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.i
-.PHONY : ReaderWriterLock.cpp.i
-
-ReaderWriterLock.s: ReaderWriterLock.cpp.s
-.PHONY : ReaderWriterLock.s
-
-# target to generate assembly for a file
-ReaderWriterLock.cpp.s:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/ReaderWriterLock.cpp.s
-.PHONY : ReaderWriterLock.cpp.s
-
 analyzerwatchdog.o: analyzerwatchdog.cpp.o
 .PHONY : analyzerwatchdog.o
 
@@ -177,30 +153,6 @@ analyzerwatchdog.s: analyzerwatchdog.cpp.s
 analyzerwatchdog.cpp.s:
 	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/analyzerwatchdog.cpp.s
 .PHONY : analyzerwatchdog.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd /media/shared/pco24_lab07/build-code-Desktop-Debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modelchecking_lib.dir/build.make src/CMakeFiles/modelchecking_lib.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 observablethread.o: observablethread.cpp.o
 .PHONY : observablethread.o
@@ -355,15 +307,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... modelchecking_lib"
-	@echo "... ReaderWriterLock.o"
-	@echo "... ReaderWriterLock.i"
-	@echo "... ReaderWriterLock.s"
 	@echo "... analyzerwatchdog.o"
 	@echo "... analyzerwatchdog.i"
 	@echo "... analyzerwatchdog.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... observablethread.o"
 	@echo "... observablethread.i"
 	@echo "... observablethread.s"
