@@ -65,9 +65,6 @@ void PcoModelChecker::run() {
 
     // Print statistics about the ending status of each scenario
     printStats();
-
-    // Write the model final report
-    model->finalReport();
 }
 
 void PcoModelChecker::printEndingStatus(PcoConcurrencyAnalyzer::EndingStatus endingStatus)

@@ -11,6 +11,7 @@ set(TEST_FILES
 set(TEST_HEADERS
     modeltemplate.h
     modelExercice13.h
+#    modelnumbers.h
 )
 
 add_executable(PCO_LAB07 ${TEST_FILES} ${TEST_HEADERS})
