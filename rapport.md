@@ -45,7 +45,7 @@ Pour valider notre solution, nous avons mis en œuvre les étapes suivantes :
 
 3. *Résultats attendus* : Les résultats des tests montrent que :
         Aucun scénario ne se termine par un deadlock ou un dépassement du poids maximal.
-        Tous les scénarios finissent soit en AllScenario soit en DeadEnd.
+        Tous les scénarios finissent soit en `AllScenario` soit en `DeadEnd`.
 
 4. *Limitation du nombre de scénarios* : Nous avons du jouer avec le nombre total de scénarios générés en ajustant la profondeur des tests pour éviter de bloquer certains scénarios valide dû au nombre d'étapes.
 
