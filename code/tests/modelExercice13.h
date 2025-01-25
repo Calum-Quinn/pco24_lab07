@@ -153,8 +153,10 @@ public:
     }
 
     void build() override {
-        threads.emplace_back(std::make_unique<CarThread>(bridgeManager, "Car"));
-        threads.emplace_back(std::make_unique<TruckThread>(bridgeManager, "Truck"));
+        threads.emplace_back(std::make_unique<CarThread>(bridgeManager, "Car1"));
+//        threads.emplace_back(std::make_unique<CarThread>(bridgeManager, "Car2"));
+        threads.emplace_back(std::make_unique<TruckThread>(bridgeManager, "Truck1"));
+//        threads.emplace_back(std::make_unique<TruckThread>(bridgeManager, "Truck2"));
 
         scenarioBuilder = std::make_unique<ScenarioBuilderBuffer>();
         scenarioBuilder->init(threads, 12);
@@ -165,9 +167,9 @@ public:
     }
 
     void postRun(Scenario &scenario) override {
-        std::cout << "---------------------------------------" << std::endl;
-        std::cout << "Scenario : ";
-        ScenarioPrint::printScenario(scenario);
+//        std::cout << "---------------------------------------" << std::endl;
+//        std::cout << "Scenario : ";
+//        ScenarioPrint::printScenario(scenario);
     }
 
 };
