@@ -22,12 +22,17 @@
 
 # Introduction
 
-Exercice 20.1 choisi pour implémentation
-	Reprendre l'algorithme général avec priorité aux lecteurs, et l'adapter pour la priorité aux rédacteurs.
+Nous avons choisi d'implémenter l'exercice 13.1 (Bridge Manager Float).
+
+Le corrigé de l'exercice a été repris et légèrement adapté pour utiliser la librairie de test de concurrence.
 
 # Conception
 
 ## Choix d'implémentation
+
+L'implémentation de l'exercice 13 nous a amené au graphe de scénario suivant.
+
+![Graphe de scénarios](./GraphDeScenario.svg)
 
 
 # Tests

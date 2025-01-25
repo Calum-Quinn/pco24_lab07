@@ -41,7 +41,6 @@ public:
         usedWeight += weight;
 
         accesData.release();
-        endScenario();
     }
 
     void leave(float weight)
@@ -147,7 +146,7 @@ private:
 
 public:
 
-    ModelExercice13() : bridgeManager(12.0f) {}
+    ModelExercice13() : bridgeManager(30.0f) {}
 
     bool checkInvariants() override {
         return true;
